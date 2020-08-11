@@ -1,0 +1,11 @@
+<!-- app/views/restaurants/index.html.erb -->
+<h1>My Tasks</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><p>    <%= task.completed == true ? '✓' : '𐄂' %>
+      <%= link_to task.title, task_path(task) %>
+    </p></li>
+  <% end %>
+</ul>
+<%= link_to "Create new task", tasks_new_path %>
+
